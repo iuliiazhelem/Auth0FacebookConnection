@@ -19,9 +19,22 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pZ-HB-0P3">
                                 <rect key="frame" x="20" y="28" width="188" height="30"/>
-                                <state key="normal" title="Login to facebook"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login to facebook">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="clickFacebookLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFE-aK-l5f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xq7-r9-Qb0">
+                                <rect key="frame" x="20" y="83" width="188" height="30"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get big picture">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickGetBigPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwu-0G-ByF"/>
                                 </connections>
                             </button>
                         </subviews>
