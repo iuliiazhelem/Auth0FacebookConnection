@@ -28,13 +28,15 @@ class ViewController: UIViewController {
         
         if let actualToken = token {
             
-            // We need url "https://<Auth0 Domain>/userinfo/?access_token=<access_token>"
+            // We need url "https://<Auth0 Domain>/userinfo"
+            // and header "Authorization : Bearer <access_token>"
             let userDomain = (NSBundle.mainBundle().infoDictionary!["Auth0Domain"]) as! String
-            let urlString = "https://\(userDomain)/userinfo/?access_token=\(actualToken.accessToken!)"
+            let urlString = "https://\(userDomain)/userinfo"
             let url = NSURL(string: urlString)
             if let actualUrl = url {
                 let request = NSMutableURLRequest(URL: actualUrl)
                 request.HTTPMethod = "GET";
+                request.allHTTPHeaderFields = ["Authorization" : "Bearer \(actualToken.accessToken!)"]
             
                 NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: {(data : NSData?, response : NSURLResponse?, error : NSError?) in
                 
