@@ -68,6 +68,7 @@ class ViewController: UIViewController {
             print("We did it!. Logged in with Auth0.")
             self.showMessage("We did it!. Logged in with Auth0.");
             self.token = token;
+            let urlForBigPicture = profile.extraInfo["picture_large"] as? String
         }
         let failure = { (error: NSError) in
             print("Oops something went wrong: \(error)")
